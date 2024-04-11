@@ -40,7 +40,7 @@ export async function pokemonList() {
     pokemonDiv.classList.add("pokemon");
 
     const img = document.createElement("img"); // creates image of the pokemon
-    img.src = pokemon.sprites.regular;
+    img.src = pokemon.sprites.shiny;
     img.alt = `Sprite of ${pokemon.name.en}`;
 
     const p = document.createElement("p"); // creates number and name of the pokemon
