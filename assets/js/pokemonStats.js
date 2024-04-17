@@ -1,9 +1,17 @@
 import { fetchPokemon } from "./fetchPokemon";
+import { routerBase } from "/assets/js/routerBase";
 
 export async function pokemonStats(pokemonID) {
   console.log(pokemonID);
   const pokemon = await fetchPokemon(pokemonID);
   console.log(pokemon);
+
+  // back link
+  const back = document.createElement("a");
+  back.textContent = "← Go back";
+  back.href = `${routerBase}/`;
+  back.classList.add("backLink");
+  document.querySelector("header").appendChild(back);
 
   // page title
   const h2 = document.createElement("h2");
