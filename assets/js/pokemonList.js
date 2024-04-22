@@ -16,7 +16,7 @@ export async function pokemonList() {
   pokemonData.forEach((pokemon) => {
     const pokemonLink = document.createElement("a"); // creates the link on the whole div
     pokemonLink.classList.add("pokemon");
-    pokemonLink.href = `${routerBase}/pokemon/${pokemon.pokedex_id}`;
+    pokemonLink.href = `${routerBase}/#/pokemon/${pokemon.pokedex_id}`;
 
     const img = document.createElement("img"); // creates image of the pokemon
     img.src = pokemon.sprites.shiny;
